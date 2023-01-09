@@ -1,0 +1,3 @@
+[submodule "3rdparty/UnityNuklearLoader"]
+	path = 3rdparty/UnityNuklearLoader
+	url = git@github.com:Chutpot/UnityNuklearLoader.git

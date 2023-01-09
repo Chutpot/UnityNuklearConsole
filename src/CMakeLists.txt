@@ -1,0 +1,13 @@
+set(UNITYNUKLEARCONSOLE_PROJECT_SRC
+	UnityNuklearConsole.cpp
+	NuklearConsole.cpp
+)
+
+set(UNITYNUKLEARCONSOLE_PROJECT_HEADER
+	NuklearConsole.h
+)
+
+add_library(UnityNuklearConsole SHARED ${UNITYNUKLEARCONSOLE_PROJECT_SRC} ${UNITYNUKLEARCONSOLE_PROJECT_HEADER})
+target_link_libraries(UnityNuklearConsole UnityNuklearLoader)
+target_compile_definitions(UnityNuklearConsole PRIVATE COMPILE_DEFINITIONS UNITYNUKLEAR_LOADER_IS_NO_EXPORT)
+set_property(GLOBAL PROPERTY VS_STARTUP_PROJECT UnityNuklearConsole)
